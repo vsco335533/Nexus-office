@@ -1,0 +1,167 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    /* Use Tailwind's box-sizing utility instead of a non-existent custom class */
+    @apply box-border;
+  }
+  
+  body {
+    @apply bg-ash-50 text-ash-900 dark:bg-ash-900 dark:text-ash-50 transition-colors duration-300;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/70 dark:bg-ash-800/70 border border-white/20 dark:border-ash-700/50;
+  }
+  
+  .gradient-border {
+    @apply relative bg-gradient-to-r from-primary-500 to-primary-600 p-0.5 rounded-2xl;
+  }
+  
+  .gradient-border::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-primary-500 to-primary-600 rounded-2xl blur-sm opacity-50;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 
+           text-white font-semibold py-3 px-6 rounded-xl shadow-glow hover:shadow-glossy 
+           transition-all duration-300 transform hover:scale-105 active:scale-95;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white 
+           font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105;
+  }
+  
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-300 
+           hover:bg-primary-50 dark:hover:bg-primary-900/20 hover:text-primary-600 
+           dark:hover:text-primary-400 hover:translate-x-2;
+  }
+  
+  .nav-item.active {
+    @apply bg-gradient-to-r from-primary-500/10 to-primary-600/10 text-primary-600 
+           dark:text-primary-400 border-r-4 border-primary-500 shadow-inner;
+  }
+  
+  /* Editor toolbar and tool-btn removed (Editor component deleted) */
+  
+  .modal-overlay {
+    @apply fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center 
+           z-50 transition-opacity duration-300;
+  }
+  
+  .modal-content {
+    @apply bg-white dark:bg-ash-800 rounded-3xl shadow-2xl p-8 max-w-md w-full mx-4 
+           transform transition-all duration-300 scale-95 hover:scale-100;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-polished {
+    @apply bg-gradient-to-br from-ash-50 via-white to-ash-100 
+           dark:from-ash-800 dark:via-ash-900 dark:to-ash-800;
+  }
+
+  /* Dark mode styles for CKEditor */
+  .dark .ck.ck-editor__main > .ck-editor__editable {
+    background-color: #111827;
+    color: #ffffff;
+    border-color: #374151;
+  }
+
+  .dark .ck-editor__editable {
+    background-color: #111827;
+    color: #ffffff;
+  }
+
+  .dark .ck.ck-content {
+    color: #ffffff;
+  }
+
+  .dark .ck.ck-editor__nested-editable {
+    background-color: #0f172a;
+    color: #ffffff;
+  }
+
+  .dark .ck .ck-button {
+    color: #d1d5db;
+  }
+
+  .dark .ck .ck-button:hover {
+    background-color: #374151;
+    color: #ffffff;
+  }
+
+  .dark .ck .ck-button.ck-on {
+    background-color: #dc2626;
+    color: #ffffff;
+  }
+
+  .dark .ck.ck-toolbar {
+    background-color: #1f2937;
+    border-color: #374151;
+  }
+
+  .dark .ck.ck-toolbar__separator {
+    background-color: #374151;
+  }
+
+  .dark textarea,
+  .dark input[type="text"],
+  .dark input[type="email"],
+  .dark input[type="password"],
+  .dark input[type="search"],
+  .dark select {
+    background-color: #111827;
+    color: #ffffff;
+    border-color: #374151;
+  }
+
+  .dark textarea::placeholder,
+  .dark input::placeholder {
+    color: #9ca3af;
+  }
+
+  .dark textarea:focus,
+  .dark input:focus,
+  .dark select:focus {
+    background-color: #1f2937;
+    color: #ffffff;
+    border-color: #dc2626;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(-10px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(220, 38, 38, 0.1); }
+  50% { box-shadow: 0 0 30px rgba(220, 38, 38, 0.2); }
+}

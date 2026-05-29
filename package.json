@@ -1,0 +1,35 @@
+{
+  "name": "nexus-frontend",
+  "version": "1.0.0",
+  "description": "Nexus note sharing application",
+  "scripts": {
+    "dev": "next dev",
+  "test": "vitest --run --environment jsdom",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "13.5.6",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "axios": "^1.5.0",
+    "js-cookie": "^3.0.1",
+    "qrcode": "^1.5.3",
+    "file-saver": "^2.0.5",
+    "react-hot-toast": "^2.4.1",
+    "lucide-react": "^0.288.0",
+    "@ckeditor/ckeditor5-react": "^5.1.0",
+    "@ckeditor/ckeditor5-build-classic": "^37.1.0",
+    "html-docx-js": "^0.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.15",
+    "postcss": "^8.4.29",
+    "tailwindcss": "^3.3.3",
+    "vitest": "^1.1.6",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/jest-dom": "^6.0.0",
+    "jsdom": "^22.1.0"
+  }
+}

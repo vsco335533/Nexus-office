@@ -1,0 +1,43 @@
+
+> nexus-frontend@1.0.0 dev
+> next dev
+
+  ▲ Next.js 13.5.6
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Ready in 1486ms
+ ✓ Compiled /_error in 1539ms (1642 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+Browserslist: browsers data (caniuse-lite) is 7 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+ ✓ Compiled / in 1885ms (1694 modules)
+ ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+ ✓ Compiled /signin in 319ms (1700 modules)
+ ✓ Compiled /publish in 431ms (1704 modules)
+ ✓ Compiled /tools in 215ms (1708 modules)
+ ✓ Compiled /signup in 310ms (1712 modules)
+ ✓ Compiled /[code] in 233ms (1716 modules)
+Warning: A title element received an array with more than 1 element as children. In browsers title Elements can only have Text Nodes as children. If the children being rendered output more than a single text node in aggregate the browser will display markup and comments as text in the title and hydration will likely fail and fall back to client rendering
+    at title
+    at head
+    at Head (webpack-internal:///./node_modules/next/dist/pages/_document.js:258:1)
+    at html
+    at Html (webpack-internal:///./node_modules/next/dist/pages/_document.js:676:132)
+    at Document (webpack-internal:///./node_modules/next/dist/pages/_document.js:692:1)
+Warning: A title element received an array with more than 1 element as children. In browsers title Elements can only have Text Nodes as children. If the children being rendered output more than a single text node in aggregate the browser will display markup and comments as text in the title and hydration will likely fail and fall back to client rendering
+    at title
+    at head
+    at Head (webpack-internal:///./node_modules/next/dist/pages/_document.js:258:1)
+    at html
+    at Html (webpack-internal:///./node_modules/next/dist/pages/_document.js:676:132)
+    at Document (webpack-internal:///./node_modules/next/dist/pages/_document.js:692:1)
+Warning: A title element received an array with more than 1 element as children. In browsers title Elements can only have Text Nodes as children. If the children being rendered output more than a single text node in aggregate the browser will display markup and comments as text in the title and hydration will likely fail and fall back to client rendering
+    at title
+    at head
+    at Head (webpack-internal:///./node_modules/next/dist/pages/_document.js:258:1)
+    at html
+    at Html (webpack-internal:///./node_modules/next/dist/pages/_document.js:676:132)
+    at Document (webpack-internal:///./node_modules/next/dist/pages/_document.js:692:1)
