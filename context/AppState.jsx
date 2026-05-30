@@ -50,10 +50,10 @@ export function AppStateProvider({ children }) {
     if (format === 'docx') {
       // create a simple HTML representation of notes and convert to docx
       const html = `<!doctype html><html><head><meta charset="utf-8"></head><body>${data.map(n=>`<h2>${n.title}</h2>${n.content}<hr/>`).join('')}</body></html>`;
-      const htmlDocxMod = await import('html-docx-js/dist/html-docx');
-      const blob = htmlDocxMod.default.asBlob ? htmlDocxMod.default.asBlob(html) : htmlDocxMod.default(html);
+      const { htmlToDocBlob } = await import('../utils/htmlToDocx');
+      const blob = htmlToDocBlob(html);
       const mod = await import('file-saver');
-      mod.saveAs(blob, `nexus-notes-export.docx`);
+      mod.saveAs(blob, `nexus-notes-export.doc`);
       return;
     }
 

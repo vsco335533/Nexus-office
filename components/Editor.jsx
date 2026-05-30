@@ -156,10 +156,10 @@ export default function Editor() {
           break;
 
         case 'docx':
-          const htmlDocxMod = await import('html-docx-js/dist/html-docx');
+          const { htmlToDocBlob } = await import('../utils/htmlToDocx');
           const docContent = `<h1>${title}</h1>${htmlContent}`;
-          const blob = htmlDocxMod.default.asBlob ? htmlDocxMod.default.asBlob(docContent) : htmlDocxMod.default(docContent);
-          saveAs(blob, `${filename}.docx`);
+          const blob = htmlToDocBlob(docContent);
+          saveAs(blob, `${filename}.doc`);
           toast.success('Downloaded as DOCX');
           break;
 
@@ -346,9 +346,9 @@ export default function Editor() {
     }
     try {
       const html = editorInstance.getData();
-      const htmlDocxMod = await import('html-docx-js/dist/html-docx');
-      const blob = htmlDocxMod.default.asBlob ? htmlDocxMod.default.asBlob(html) : htmlDocxMod.default(html);
-      saveAs(blob, `${(title || 'document').replace(/\s+/g, '_')}.docx`);
+      const { htmlToDocBlob } = await import('../utils/htmlToDocx');
+      const blob = htmlToDocBlob(html);
+      saveAs(blob, `${(title || 'document').replace(/\s+/g, '_')}.doc`);
       toast.success('Exported as DOCX');
     } catch (err) {
       console.error('DOCX export error', err);

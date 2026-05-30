@@ -41,3 +41,12 @@ Warning: A title element received an array with more than 1 element as children.
     at html
     at Html (webpack-internal:///./node_modules/next/dist/pages/_document.js:676:132)
     at Document (webpack-internal:///./node_modules/next/dist/pages/_document.js:692:1)
+ ✓ Compiled in 1367ms (1646 modules)
+ ✓ Compiled in 2.1s (1714 modules)
+ ⚠ Found a change in next.config.js. Restarting the server to apply the changes...
+  ▲ Next.js 14.2.35
+  - Local:        http://localhost:3000
+  - Environments: .env.local
+
+ ✓ Starting...
+ ✓ Ready in 1864ms
